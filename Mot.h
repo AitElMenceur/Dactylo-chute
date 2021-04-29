@@ -9,7 +9,7 @@ class Mot {
 	string mot_;
 	int size_;
 public:
-	Mot(string mot,int size);
+	Mot(string mot, int size);
 	~Mot();
 
 	bool TestLettre(int position, string lettre);

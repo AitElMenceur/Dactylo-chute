@@ -4,7 +4,7 @@
 #include "Mot.h"
 using namespace std;
 
-class List{
+class List {
 	list<Mot*> list_;
 	int size_;
 

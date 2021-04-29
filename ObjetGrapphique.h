@@ -4,7 +4,7 @@
 
 class ObjetGrapphique {
 public:
-	virtual void draw() = 0 ;
+	virtual void draw() = 0;
 	virtual void remove() = 0;
 	virtual void move() = 0;
 };
