@@ -1,0 +1,2 @@
+# Dactylo-chute
+L’objectif de ce jeu est d’apprendre à mieux écrire du texte au clavier d’un ordinateur. Pour cela, des mots apparaissent en haut de l’écran et descendent petit à petit. Pour faire disparaître un mot et marquer des points, il faut le taper au clavier avant qu’il arrive au bas de l’écran. Suivant la vitesse de frappe, un nouveau mot peut apparaître avant que l’on ait pu faire disparaître le précédent. Il faut cependant taper les mots dans l’ordre ou ils apparaissent
