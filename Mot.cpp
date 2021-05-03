@@ -17,7 +17,7 @@ bool Mot::TestLettre(int position, string lettre)
 
 bool Mot::TestMot(string mot)
 {
-	return mot == mot_;
+	return mot_ == mot;
 }
 
 string Mot::getmot()

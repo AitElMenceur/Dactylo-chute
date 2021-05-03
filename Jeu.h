@@ -12,16 +12,29 @@ class Jeu {
 	int score_;
 	int difficulty_;
 	list<double> wpm_;
-	List *list_;
+	List* list_;
+	clock_t time_[2] = { 0 };
 public:
 	Jeu(int score = 0, int difficulty = 0, int wpm = 0);
-	int getscore();
-	void setscore(int score);
+
+
+	void starttimer();
+	void stoptimer();
+
 	void computescore();
+	int getscore();
+
 	void setdifficulty(int difficulty);
-	int getdifficulty();  
-	double computewpm();
+	int getdifficulty();
+
+	void computewpm();
+
+	bool Motcorrect(string input);
+	vector<bool> Lettrecorrectes(string input);
+	bool Plusdemots();
 	bool worldisonscreen();
+
+	void MotSuivant();
 };
 #endif 
 

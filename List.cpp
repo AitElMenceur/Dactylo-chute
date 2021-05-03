@@ -10,7 +10,6 @@ Mot* List::getlast()
 
 List::List(int difficulty)
 {
-
 	string path = string("./Mots/difficulty_" + to_string(difficulty) + ".txt");
 	ifstream in(path.c_str());
 	if (in.is_open()) {
@@ -39,5 +38,11 @@ void List::display()
 	for (Mot* x : list_) {
 		cout << x->getmot() << endl;
 	}
+}
+
+void List::motsuivant()
+{
+	list_.pop_back();
+	size_ -= 1;
 }
 
