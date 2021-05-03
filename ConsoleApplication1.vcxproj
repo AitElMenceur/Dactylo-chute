@@ -141,8 +141,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="Jeu.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Mot.cpp" />
+    <ClCompile Include="TestJeu.cpp" />
     <ClCompile Include="TestList.cpp" />
     <ClCompile Include="TestMot.cpp" />
   </ItemGroup>
@@ -155,7 +157,7 @@
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Mots\difficulty_0.txt.txt" />
+    <Text Include="Mots\difficulty_0.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,7 +9,9 @@ class List {
 	int size_;
 
 public:
-	List(int difficulty);
+	Mot* getlast();
+	List(int difficulty = 0);
+	int getsize();
 	~List();
 	void display();
 };

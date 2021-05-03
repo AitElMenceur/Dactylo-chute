@@ -3,10 +3,15 @@
 
 
 using namespace std;
+Mot* List::getlast()
+{
+	return list_.back();
+}
+
 List::List(int difficulty)
 {
 
-	string path = string("./Mots/difficulty_" + to_string(0) + ".txt");
+	string path = string("./Mots/difficulty_" + to_string(difficulty) + ".txt");
 	ifstream in(path.c_str());
 	if (in.is_open()) {
 		string line;
@@ -15,6 +20,11 @@ List::List(int difficulty)
 		}
 	}
 	size_ = list_.size();
+}
+
+int List::getsize()
+{
+	return size_;
 }
 
 List::~List()
