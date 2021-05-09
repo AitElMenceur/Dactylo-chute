@@ -1,3 +1,4 @@
 maison
 bateau
 chateaux
+ecole
