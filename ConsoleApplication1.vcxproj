@@ -89,6 +89,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\Mots;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,7 +153,6 @@
     <ClInclude Include="Jeu.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Mot.h" />
-    <ClInclude Include="MotGraph.h" />
     <ClInclude Include="ObjetGrapphique.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>

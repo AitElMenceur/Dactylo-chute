@@ -2,11 +2,11 @@
 
 #include "Mot.h"
 
-class ObjetGrapphique {
+class ObjetGrapphique : public Mot {
 public:
-	virtual void draw() = 0;
-	virtual void remove() = 0;
-	virtual void move() = 0;
+	void draw() ;
+	void remove();
+	void move();
 };
 
 

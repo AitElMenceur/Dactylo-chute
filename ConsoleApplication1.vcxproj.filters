@@ -50,9 +50,6 @@
     <ClInclude Include="ObjetGrapphique.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MotGraph.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Test.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>

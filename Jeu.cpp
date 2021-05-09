@@ -1,10 +1,22 @@
 #include "Jeu.h"
 
-Jeu::Jeu(int score, int difficulty, int wpm)
+Jeu::Jeu(int score,int wpm)
 {
 	score_ = score;
-	difficulty_ = difficulty;
 	list_ = new List(difficulty_);
+	difficulty_ = list_->getlast()->getmot().size() / 4;
+}
+
+Jeu::Jeu(string file,int score,int wpm)
+{
+	score_ = score;
+	list_ = new List(file);
+	difficulty_ = list_->getlast()->getmot().size()/4;
+}
+
+Jeu::~Jeu()
+{
+	delete(list_);
 }
 
 int Jeu::getscore()

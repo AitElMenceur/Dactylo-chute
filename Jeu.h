@@ -1,21 +1,25 @@
 #ifndef Jeu
+#define JEU
 
-#include"List.h"
 #include <ctime>
 #include <iostream>
 #include <thread>
 #include <future>
 #include <vector>
+
+#include"List.h"
 using namespace std;
 
 class Jeu {
 	int score_;
-	int difficulty_;
+	double difficulty_;
 	list<double> wpm_;
 	List* list_;
 	clock_t time_[2] = { 0 };
 public:
-	Jeu(int score = 0, int difficulty = 0, int wpm = 0);
+	Jeu(int score = 0, int wpm = 0);
+	Jeu(string file,int score = 0,int wpm = 0);
+	~Jeu();
 
 
 	void starttimer();
@@ -32,7 +36,6 @@ public:
 	bool Motcorrect(string input);
 	vector<bool> Lettrecorrectes(string input);
 	bool Plusdemots();
-	bool worldisonscreen();
 
 	void MotSuivant();
 };

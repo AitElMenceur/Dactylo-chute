@@ -6,10 +6,6 @@ Mot::Mot(string mot, int size)
 	size_ = size;
 }
 
-Mot::~Mot()
-{
-}
-
 bool Mot::TestLettre(int position, string lettre)
 {
 	return mot_.substr(position, 1) == lettre;
