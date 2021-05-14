@@ -5,12 +5,15 @@ graphMot::graphMot(string mot, int size)
 {
 	position_ = 0;
 	speed_ = 0;
-	sf::Font font;
-	font.loadFromFile("OpenSans-Bold.ttf");
+	font_.loadFromFile("OpenSans-Bold.ttf");
+	if (!font_.loadFromFile("OpenSans-Bold.ttf"))
+	{
+		std::cout << "ERROR: Cannot load font" << std::endl;
+	}
 	for (int i = 0; i < size; i++) {
 		texte_.push_back(sf::Text());
 		texte_.back().setString(mot.substr(i, 1));
-		texte_.back().setFont(font);
+		texte_.back().setFont(font_);
 		texte_.back().setCharacterSize(20);
 		texte_.back().setFillColor(sf::Color::White);
 		texte_.back().setOutlineColor(sf::Color::White);

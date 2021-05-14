@@ -6,6 +6,7 @@
 class graphMot : public Mot {
 	int position_;
 	int speed_;
+	sf::Font font_;
 	vector<sf::Text> texte_;
 
 public:

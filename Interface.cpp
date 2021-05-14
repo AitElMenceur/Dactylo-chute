@@ -2,13 +2,14 @@
 
 Interface::Interface()
 {
-	sf::RenderWindow window_(sf::VideoMode(1024, 500), "Interface");
+	window_.create(sf::VideoMode(1024, 500), "Interface");
 	window_.setVerticalSyncEnabled(true);
 }
-void Interface::draw(graphMot& mot)
+void Interface::draw(graphMot &mot)
 {
 	int taille = mot.getmot().size();
 	for (int i = 0; i < taille; i++) {
+
 		sf::Text lettre = mot.getText(i);
 		window_.draw(lettre);
 	}

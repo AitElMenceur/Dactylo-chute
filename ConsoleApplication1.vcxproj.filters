@@ -30,6 +30,15 @@
     <ClCompile Include="TestList.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="graphmot.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test_graphMot.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mot.h">
@@ -41,13 +50,16 @@
     <ClInclude Include="List.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ObjetGrapphique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MotGraph.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Test.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="graphmot.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="test_graphMot.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -55,5 +67,45 @@
     <Text Include="Mots\difficulty_0.txt.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openal32.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-audio-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-audio-d-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-graphics-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-graphics-d-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-network-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-network-d-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-system-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-system-d-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-window-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="sfml-window-d-2.dll">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="OpenSans-Bold.ttf">
+      <Filter>Fichiers de ressources</Filter>
+    </Font>
   </ItemGroup>
 </Project>
