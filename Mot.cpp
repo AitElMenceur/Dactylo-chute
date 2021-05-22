@@ -1,4 +1,5 @@
 #include "Mot.h"
+#include <algorithm>
 
 Mot::Mot(string mot, int size)
 {
@@ -8,7 +9,10 @@ Mot::Mot(string mot, int size)
 
 bool Mot::TestLettre(int position, string lettre)
 {
-	return mot_.substr(position, 1) == lettre;
+	string m = mot_.substr(position, 1);
+	transform(m.begin(), m.end(), m.begin(), ::tolower);
+	transform(lettre.begin(), lettre.end(), lettre.begin(), ::tolower);
+	return m == lettre;
 }
 
 bool Mot::TestMot(string mot)

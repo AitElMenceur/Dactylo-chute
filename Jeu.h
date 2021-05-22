@@ -1,4 +1,4 @@
-#ifndef Jeu
+#ifndef JEU
 #define JEU
 
 #include <ctime>
@@ -38,6 +38,7 @@ public:
 	bool Plusdemots();
 
 	void MotSuivant();
+	Mot* Getlast();
 };
 #endif 
 

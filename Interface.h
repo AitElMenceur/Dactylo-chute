@@ -7,5 +7,6 @@ public:
 	Interface();
 	void drawMot(graphMot &mot);
 	bool testEcran(graphMot &mot);
+	bool testBarre(graphMot& mot, double difficulté);
 	string Keystroke(sf::Event & keyevent);
 };

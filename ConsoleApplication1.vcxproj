@@ -154,6 +154,7 @@
     </ClCompile>
     <ClCompile Include="Mot.cpp" />
     <ClCompile Include="TestGraphMot_Interface.cpp" />
+    <ClCompile Include="TestInterfaceplusJeu.cpp" />
     <ClCompile Include="TestJeu.cpp" />
     <ClCompile Include="TestList.cpp" />
     <ClCompile Include="TestMot.cpp" />

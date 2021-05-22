@@ -45,6 +45,9 @@
     <ClCompile Include="TestGraphMot_Interface.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="TestInterfaceplusJeu.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mot.h">

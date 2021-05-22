@@ -19,6 +19,10 @@ bool Interface::testEcran(graphMot &mot) //renvoie vrai si le mot est dans l'écr
 	return mot.get_y() < this->getSize().y - 20;
 }
 
+bool Interface::testBarre(graphMot &mot, double difficulte) {
+	return mot.get_y() < (this->getSize().y/difficulte);
+}
+
 string Interface::Keystroke(sf::Event & keyevent)
 {
 	if (keyevent.type == sf::Event::KeyPressed) {

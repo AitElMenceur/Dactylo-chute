@@ -1,4 +1,4 @@
-#ifndef List
+#ifndef LIST
 #define LIST
 #include <list>
 #include <fstream>

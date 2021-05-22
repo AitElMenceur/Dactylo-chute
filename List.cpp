@@ -59,6 +59,7 @@ void List::display()
 
 void List::motsuivant()
 {
+
 	list_.pop_back();
 	size_ -= 1;
 }

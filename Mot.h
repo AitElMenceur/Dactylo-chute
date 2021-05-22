@@ -1,4 +1,4 @@
-#ifndef Mot
+#ifndef MOT
 #define MOT
 
 #include <string>

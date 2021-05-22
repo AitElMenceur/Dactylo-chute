@@ -1,6 +1,5 @@
 #include "Test.h"
 #include "Jeu.h"
-#include <string>
 #include <iostream>
 #include <filesystem>
 using namespace std::filesystem;

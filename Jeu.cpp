@@ -77,7 +77,7 @@ vector<bool> Jeu::Lettrecorrectes(string input)
 	return b;
 }
 
-bool Jeu::Plusdemots()
+bool Jeu::Plusdemots() //vrai si vide
 {
 	return list_->getsize() == 0;
 }
@@ -88,6 +88,12 @@ void Jeu::MotSuivant()
 	computewpm();
 	list_->motsuivant();
 }
+
+Mot* Jeu::Getlast()
+{
+	return list_->getlast();
+}
+
 
 
 
