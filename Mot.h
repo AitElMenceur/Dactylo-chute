@@ -13,6 +13,7 @@ public:
 
 	bool TestLettre(int position, string lettre);
 	bool TestMot(string mot);
+	int getsize();
 	string getmot();
 };
 #endif // !Mot
