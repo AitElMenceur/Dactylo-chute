@@ -146,14 +146,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="main.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="graphmot.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Mot.cpp" />
     <ClCompile Include="TestList.cpp" />
     <ClCompile Include="TestMot.cpp" />
-    <ClCompile Include="test_graphMot.cpp" />
+    <ClCompile Include="TestGraphMot_Interface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="graphmot.h" />

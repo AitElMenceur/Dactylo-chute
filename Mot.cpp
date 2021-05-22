@@ -20,6 +20,11 @@ bool Mot::TestMot(string mot)
 	return mot == mot_;
 }
 
+int Mot::getsize()
+{
+	return size_;
+}
+
 string Mot::getmot()
 {
 	return mot_;

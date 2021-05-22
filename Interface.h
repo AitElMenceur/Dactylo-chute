@@ -1,12 +1,11 @@
 #pragma once
 #include "graphmot.h"
+#include <SFML/Window/Keyboard.hpp>
 
-class Interface {
-	sf::RenderWindow window_;
+class Interface : public sf::RenderWindow {
 public:
 	Interface();
-	void draw(graphMot &mot);
-	void display();
-	void remove();
-	void move(graphMot mot);
+	void drawMot(graphMot &mot);
+	bool testEcran(graphMot &mot);
+	string Keystroke(sf::Event & keyevent);
 };

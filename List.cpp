@@ -1,8 +1,6 @@
 #include "List.h"
-
-
-
 using namespace std;
+
 List::List(int difficulty)
 {
 
