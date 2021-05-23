@@ -7,11 +7,11 @@ Jeu::Jeu(int score,int wpm)
 	difficulty_ = list_->getlast()->getmot().size() / 4;
 }
 
-Jeu::Jeu(string file,int score,int wpm)
+Jeu::Jeu(string file,int difficulty)
 {
-	score_ = score;
+	score_ = 0;
 	list_ = new List(file);
-	difficulty_ = list_->getlast()->getmot().size()/4;
+	setdifficulty(difficulty);
 }
 
 Jeu::~Jeu()
@@ -45,7 +45,9 @@ void Jeu::computescore()
 
 void Jeu::setdifficulty(int difficulty)
 {
-	difficulty_ = difficulty;
+	if (difficulty > 3) difficulty_ = 3;
+	if (difficulty<1) difficulty_ = 1;
+	else difficulty_ = difficulty;
 }
 
 int Jeu::getdifficulty()

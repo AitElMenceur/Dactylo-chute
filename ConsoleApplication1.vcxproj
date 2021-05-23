@@ -146,12 +146,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="MenuDactylochute.cpp" />
     <ClCompile Include="graphmot.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="Jeu.cpp" />
     <ClCompile Include="List.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="Mot.cpp" />
     <ClCompile Include="TestGraphMot_Interface.cpp" />
     <ClCompile Include="TestInterfaceplusJeu.cpp" />
@@ -160,16 +162,21 @@
     <ClCompile Include="TestMot.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MenuDactylochute.h" />
     <ClInclude Include="graphmot.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Jeu.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="Mot.h" />
     <ClInclude Include="ObjetGrapphique.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Mots\difficulty_0.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

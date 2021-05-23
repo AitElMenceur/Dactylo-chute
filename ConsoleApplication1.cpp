@@ -2,9 +2,14 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include "menu.h";
+#include "MenuDactylochute.h"
 using namespace std;
 int main() {
-	testinterjeu();
+	MenuDactylochute m= MenuDactylochute();
+	m.afficherMenu();
+	m.executer();
+
 }
 /*Testclassmot();
 	

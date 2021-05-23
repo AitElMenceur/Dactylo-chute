@@ -18,7 +18,7 @@ class Jeu {
 	clock_t time_[2] = { 0 };
 public:
 	Jeu(int score = 0, int wpm = 0);
-	Jeu(string file,int score = 0,int wpm = 0);
+	Jeu(string file,int dificulty = 0);
 	~Jeu();
 
 
