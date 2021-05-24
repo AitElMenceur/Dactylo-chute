@@ -40,7 +40,10 @@ public:
 	 * @brief Arret d'un timer pour le calcul de score
 	*/
 	void stoptimer();
-
+	/**
+	 * @brief Enleve le temps de la pause après une pause
+	*/
+	void resumetimer();
 	/**
 	 * @brief Calcul le score final en fin de Jeu
 	*/

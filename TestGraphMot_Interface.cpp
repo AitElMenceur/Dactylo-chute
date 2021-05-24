@@ -37,7 +37,7 @@ int test_graphMot() {
 		fenetre.drawMot(mot);
 		fenetre.display();
 		fenetre.clear();
-		mot.moveMot();
+		mot.moveMot(mot.getspeed());
 		
 		}
 	return 0;

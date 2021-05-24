@@ -34,6 +34,11 @@ void Jeu::stoptimer()
 	time_[1] = clock();
 }
 
+void Jeu::resumetimer() 
+{
+	time_[0] = time_[0] + (clock() - time_[1]);
+}
+
 void Jeu::computescore()
 {
 	for (double x : wpm_) {
