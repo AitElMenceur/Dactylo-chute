@@ -3,7 +3,8 @@
 graphMot::graphMot(string mot, int size)
 	: Mot(mot, size)
 {
-	speed_ = 0;
+	speed_ = 1;
+	float width = 0.f;
 	font_.loadFromFile("OpenSans-Bold.ttf");
 	if (!font_.loadFromFile("OpenSans-Bold.ttf"))
 	{
@@ -17,13 +18,15 @@ graphMot::graphMot(string mot, int size)
 		texte_.back().setCharacterSize(20);
 		texte_.back().setFillColor(sf::Color::White);
 		texte_.back().setOutlineColor(sf::Color::White);
-		texte_.back().setPosition(0.f + 10 * i + x, 0.f);
+		texte_.back().setPosition(width + x, 0.f);
+		width += texte_.back().getLocalBounds().width;
 	}
 }
 
 graphMot::graphMot(Mot& mot) : Mot(mot) {
 	int size = mot.getsize();
-	speed_ = 0;
+	speed_ = 1;
+	float width = 0.f;
 	font_.loadFromFile("OpenSans-Bold.ttf");
 	if (!font_.loadFromFile("OpenSans-Bold.ttf"))
 	{
@@ -37,7 +40,8 @@ graphMot::graphMot(Mot& mot) : Mot(mot) {
 		texte_.back().setCharacterSize(20);
 		texte_.back().setFillColor(sf::Color::White);
 		texte_.back().setOutlineColor(sf::Color::White);
-		texte_.back().setPosition(0.f + 10 * i + x, 0.f);
+		texte_.back().setPosition(width + x, 0.f);
+		width += texte_.back().getLocalBounds().width;
 	}
 }
 
@@ -50,6 +54,11 @@ void graphMot::changeColor(bool test, int position) {
 		texte_[position].setFillColor(sf::Color::Red);
 		texte_[position].setOutlineColor(sf::Color::Red);
 	}
+}
+
+int graphMot::getspeed()
+{
+	return speed_;
 }
 
 graphMot::~graphMot() {
@@ -65,14 +74,25 @@ void graphMot::setspeed(int speed)
 	speed_ = speed;
 }
 
-void graphMot::moveMot()
+void graphMot::moveMot(int y)
 {
 	for (int i = 0; i < getsize(); i++) {
-		texte_[i].move(0.f, 1.f);
+		texte_[i].move(0.f, y*1.f);
 	}
 }
 
 int graphMot::get_y()
 {
 	return(texte_[0].getPosition().y);
+}
+
+void graphMot::set_x(float x)
+{
+	float width = 0.f;
+	float y;
+	for (int i = 0; i < getsize(); i++) {
+		y = texte_[i].getPosition().y;
+		texte_[i].setPosition(x + width,y);
+		width += texte_[i].getLocalBounds().width;
+	}
 }

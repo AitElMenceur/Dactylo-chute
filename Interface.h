@@ -1,6 +1,6 @@
 #ifndef INTERFACE
 #define INTERFACE
-// Moutta Abd'Allah 
+// Moutaa Abd'Allah 
 
 #include "graphmot.h"
 #include <list>
@@ -67,6 +67,10 @@ public:
 	 * @return
 	*/
 	string Keystroke(sf::Event& keyevent);
+	/**
+	* @brief Affiche un écran pause
+	*/
+	bool pause();
 };
 
 #endif

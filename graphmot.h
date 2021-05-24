@@ -37,19 +37,28 @@ public:
 	*/
 	void changeColor(bool test, int position);
 	/**
+	 * @brief Renvoie la vitesse de défilement
+	*/
+	int getspeed();
+	/**
 	 * @brief Modifie la vitesse de défilement
 	 * @param speed 
 	*/
 	void setspeed(int speed);
 	/**
-	 * @brief Deplace un objet
+	 * @brief Deplace un objet de y pixel en ordonnées
 	*/
-	void moveMot();
+	void moveMot(int y);
 	/**
-	 * @brief Renvoie la position en abscisse
+	 * @brief Renvoie la position en ordonnées
 	 * @return 
 	*/
 	int get_y();
+	/**
+	* @brief Set la position en abscisses
+	* @param x
+	*/
+	void set_x(float x);
 };
 
 #endif

@@ -54,7 +54,7 @@ void testinterjeu() {
 			}
 			for (graphMot* g : mot) {
 				fenetre.drawMot(*g);
-				g->moveMot();
+				g->moveMot(g->getspeed());
 			}
 			fenetre.display();
 			fenetre.clear();
