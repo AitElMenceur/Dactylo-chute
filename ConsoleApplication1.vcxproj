@@ -169,10 +169,10 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="Mot.h" />
-    <ClInclude Include="ObjetGrapphique.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Declaration.txt" />
     <Text Include="Mots\difficulty_0.txt" />
   </ItemGroup>
   <ItemGroup>

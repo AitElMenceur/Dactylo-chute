@@ -6,11 +6,21 @@
 class MenuDactylochute : public Menu
 {
   public:
-      MenuDactylochute(); // redéfinition constructeur parent
-    void executerOption(const string &nom,bool &fin); // méthode redéfinie
-    void play(); //nouvelle méthode
-    
+      MenuDactylochute(); 
+    void executerOption(const string &nom,bool &fin); 
+    /**
+     * @brief Lance une partie du jeu
+    */
+    void play(); 
+    /**
+     * @brief Charge le nom d'un fichier texte à partir du repertoire ./Mots
+     * @return 
+    */
     string loadfile();
+    /**
+     * @brief Renvoie la difficulté selectionnée
+     * @return 
+    */
     int choosedifficulty();
 };
 #endif

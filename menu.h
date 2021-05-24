@@ -24,6 +24,7 @@ class Menu
 	string titre_;
 	vector<OptionMenu> listeOptions_;
 public:
+
 	Menu(const string& titre);
 	void setTitre(const string& titre);
 	void ajouterOption(const string& nom, const string& description);

@@ -65,9 +65,6 @@
     <ClInclude Include="List.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ObjetGrapphique.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Test.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -86,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Mots\difficulty_0.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="Declaration.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
   </ItemGroup>
