@@ -15,14 +15,16 @@ public:
 	/**
 	 * @brief Constructeur de la classe graphmot
 	 * @param mot 
-	 * @param size 
+	 * @param size
+	 * @param speed
 	*/
-	graphMot(string mot, int size);
+	graphMot(string mot,int size, int speed = 1);
 	/**
 	 * @brief Constructeur de la classe graphmot, permettant la conversion de mot à graphmot
 	 * @param mot 
+	 * @param speed
 	*/
-	graphMot(Mot& mot);
+	graphMot(Mot& mot, int speed = 1);
 	~graphMot();
 	/**
 	 * @brief Renvoie une Lettre sfml

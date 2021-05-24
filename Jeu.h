@@ -95,5 +95,4 @@ public:
 	*/
 	Mot* Getlast();
 };
-#endif 
-
+#endif

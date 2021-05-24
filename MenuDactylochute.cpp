@@ -16,6 +16,7 @@ void MenuDactylochute::executerOption(const string& nom, bool& fin)
 void MenuDactylochute::play()
 {
 	Jeu j = Jeu(loadfile(), choosedifficulty());
+	int difficulty = j.getdifficulty();
 	Interface fenetre;
 	fenetre.push_back(new graphMot(*j.Getlast()));
 	string lettre;
@@ -42,6 +43,7 @@ void MenuDactylochute::play()
 		while (fenetre.size() != 0)
 		{
 			graphMot* motatester = fenetre.front();
+			motatester->setspeed(difficulty);
 			sf::Event event;
 			if (pause) {
 				j.stoptimer();
@@ -69,7 +71,7 @@ void MenuDactylochute::play()
 							if (position == motatester->getsize() - 2) {
 								if (!j.Plusdemots()) j.MotSuivant();
 								if (!j.Plusdemots()) {
-									fenetre.push_back(new graphMot(*j.Getlast()));
+									fenetre.push_back(new graphMot(*j.Getlast(),difficulty));
 								}
 							}
 						}
@@ -84,7 +86,7 @@ void MenuDactylochute::play()
 			if (!fenetre.testBarre(*motatester, j.getdifficulty()) && fenetre.size() < 2) {
 				if (!j.Plusdemots()) j.MotSuivant();
 				if (!j.Plusdemots()) {
-					fenetre.push_back(new graphMot(*j.Getlast()));
+					fenetre.push_back(new graphMot(*j.Getlast(),difficulty));
 				}
 			}
 
@@ -93,7 +95,7 @@ void MenuDactylochute::play()
 				fenetre.pop_front();
 				if (!j.Plusdemots()) j.MotSuivant();
 				if (!j.Plusdemots()) {
-					fenetre.push_back(new graphMot(*j.Getlast()));
+					fenetre.push_back(new graphMot(*j.Getlast(),difficulty));
 				}
 				j.starttimer();
 				position = 0;
@@ -134,5 +136,3 @@ int MenuDactylochute::choosedifficulty()
 	cin >> dif;
 	return dif;
 }
-
-

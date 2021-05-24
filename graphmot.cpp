@@ -1,9 +1,9 @@
 #include "graphMot.h"
 
-graphMot::graphMot(string mot, int size)
+graphMot::graphMot(string mot,int size, int speed)
 	: Mot(mot, size)
 {
-	speed_ = 1;
+	speed_ = speed;
 	float width = 0.f;
 	font_.loadFromFile("OpenSans-Bold.ttf");
 	if (!font_.loadFromFile("OpenSans-Bold.ttf"))
@@ -23,9 +23,9 @@ graphMot::graphMot(string mot, int size)
 	}
 }
 
-graphMot::graphMot(Mot& mot) : Mot(mot) {
+graphMot::graphMot(Mot& mot,int speed) : Mot(mot) {
 	int size = mot.getsize();
-	speed_ = 1;
+	speed_ = speed;
 	float width = 0.f;
 	font_.loadFromFile("OpenSans-Bold.ttf");
 	if (!font_.loadFromFile("OpenSans-Bold.ttf"))

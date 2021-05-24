@@ -66,7 +66,10 @@ public:
 	 * @brief Arret d'un timer pour le calcul de score
 	*/
 	void stoptimer();
-
+	/**
+	 * @brief Enleve le temps de la pause après une pause
+	*/
+	void resumetimer();
 	/**
 	 * @brief Calcul le score final en fin de Jeu
 	*/
@@ -119,6 +122,7 @@ public:
 	Mot* Getlast();
 };
 #endif 
+
 #ifndef LIST
 #define LIST
 #include <list>
@@ -166,6 +170,7 @@ public:
 	Mot* getlast();
 };
 #endif 
+
 #ifndef MOT
 #define MOT
 #include <string>
@@ -207,7 +212,8 @@ public:
 	*/
 	string getmot();
 };
-#endif // !Mot
+#endif
+
 #ifndef GRAPHMOT
 #define GRAPHMOT
 // Moutta Abd'Allah 
@@ -224,48 +230,60 @@ class graphMot : public Mot {
 public:
 	/**
 	 * @brief Constructeur de la classe graphmot
-	 * @param mot 
-	 * @param size 
+	 * @param mot
+	 * @param size
+	 * @param speed
 	*/
-	graphMot(string mot, int size);
+	graphMot(string mot, int size, int speed = 1);
 	/**
 	 * @brief Constructeur de la classe graphmot, permettant la conversion de mot à graphmot
-	 * @param mot 
+	 * @param mot
+	 * @param speed
 	*/
-	graphMot(Mot& mot);
+	graphMot(Mot& mot, int speed = 1);
 	~graphMot();
 	/**
 	 * @brief Renvoie une Lettre sfml
-	 * @param position 
-	 * @return 
+	 * @param position
+	 * @return
 	*/
 	sf::Text getText(int position);
 	/**
 	 * @brief Change la couleur d'une lettre
-	 * @param test 
-	 * @param position 
+	 * @param test
+	 * @param position
 	*/
 	void changeColor(bool test, int position);
 	/**
+	 * @brief Renvoie la vitesse de défilement
+	*/
+	int getspeed();
+	/**
 	 * @brief Modifie la vitesse de défilement
-	 * @param speed 
+	 * @param speed
 	*/
 	void setspeed(int speed);
 	/**
-	 * @brief Deplace un objet
+	 * @brief Deplace un objet de y pixel en ordonnées
 	*/
-	void moveMot();
+	void moveMot(int y);
 	/**
-	 * @brief Renvoie la position en abscisse
-	 * @return 
+	 * @brief Renvoie la position en ordonnées
+	 * @return
 	*/
 	int get_y();
+	/**
+	* @brief Set la position en abscisses
+	* @param x
+	*/
+	void set_x(float x);
 };
 
 #endif
+
 #ifndef INTERFACE
 #define INTERFACE
-// Moutta Abd'Allah 
+// Moutaa Abd'Allah 
 
 #include "graphmot.h"
 #include <list>
@@ -281,8 +299,8 @@ public:
 	Interface();
 	~Interface();
 	/**
-	 * @brief Redefinitiond de methode de manipulation de la liste mot_
-	 * @return 
+	* @brief Redefinitiond de methode de manipulation de la liste mot_
+	* @return
 	*/
 	int size();
 	/**
@@ -304,7 +322,14 @@ public:
 	 * @brief Affiche un mot
 	 * @param mot
 	*/
+	/**
+	 * @brief Affiche un mot
+	 * @param mot
+	*/
 	void drawMot(graphMot& mot);
+	/**
+	 * @brief affiche l'ensemble des mots
+	*/
 	void drawlist();
 	/**
 	 * @brief Test si un mot est toujours à l'ecran
@@ -325,10 +350,9 @@ public:
 	 * @return
 	*/
 	string Keystroke(sf::Event& keyevent);
+	/**
+	* @brief Affiche un écran pause
+	*/
+	bool pause();
 };
-
 #endif
-
-
-
-

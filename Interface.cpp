@@ -1,8 +1,8 @@
 #include "Interface.h"
 
-Interface::Interface() : sf::RenderWindow(sf::VideoMode(1024, 500), "Interface")
+Interface::Interface() : sf::RenderWindow(sf::VideoMode(1024, 500), "Dactylochute")
 {
-	this->create(sf::VideoMode(1024, 500), "Interface");
+	this->create(sf::VideoMode(1024, 500), "Dactylochute");
 	this->setVerticalSyncEnabled(true);
 	this->setKeyRepeatEnabled(false);
 }
