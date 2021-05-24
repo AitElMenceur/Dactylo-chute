@@ -1,6 +1,6 @@
 #ifndef GRAPHMOT
 #define GRAPHMOT
-
+// Moutta Abd'Allah 
 
 #include "Mot.h"
 #include <SFML/Graphics.hpp>

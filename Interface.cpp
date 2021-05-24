@@ -6,11 +6,41 @@ Interface::Interface() : sf::RenderWindow(sf::VideoMode(1024, 500), "Interface")
 	this->setVerticalSyncEnabled(true);
 	this->setKeyRepeatEnabled(false);
 }
+Interface::~Interface()
+{
+	for (auto g : mot_) {
+		delete(g);
+	}
+}
+int Interface::size()
+{
+	return mot_.size();
+}
+void Interface::push_back(graphMot *mot)
+{
+	mot_.push_back(mot);
+}
+graphMot* Interface::front()
+{
+	return mot_.front();
+}
+void Interface::pop_front()
+{
+	mot_.pop_front();
+}
 void Interface::drawMot(graphMot &mot)
 {
 	int taille = mot.getmot().size();
 	for (int i = 0; i < taille; i++) {
 		sf::RenderWindow::draw(mot.getText(i));
+	}
+}
+
+void Interface::drawlist()
+{
+	for (graphMot* g : mot_) {
+		drawMot(*g);
+		g->moveMot();
 	}
 }
 

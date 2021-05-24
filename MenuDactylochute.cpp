@@ -1,11 +1,5 @@
-#include <iostream>
-#include <cstdlib>
 #include "MenuDactylochute.h"
-#include <filesystem>
-#include "Jeu.h"
-#include "graphmot.h"
-#include "Interface.h"
-using namespace std::filesystem;
+
 
 
 MenuDactylochute::MenuDactylochute() : Menu("Dactylochute")
@@ -23,19 +17,18 @@ void MenuDactylochute::executerOption(const string& nom, bool& fin)
 
 void MenuDactylochute::play()
 {
-	Jeu j = Jeu(loadfile(),choosedifficulty());
-	list<graphMot*> mot;
-	mot.push_back(new graphMot(*j.Getlast()));
+	Jeu j = Jeu(loadfile(),choosedifficulty());	
 	Interface fenetre;
+	fenetre.push_back(new graphMot(*j.Getlast()));
 	string lettre;
 	int position = 0;
 
 	while (fenetre.isOpen())
 	{
 		j.starttimer();
-		while (mot.size() != 0)
+		while (fenetre.size() != 0)
 		{
-			graphMot* motatester = mot.front();
+			graphMot* motatester = fenetre.front();
 			sf::Event event;
 			while (fenetre.pollEvent(event))
 			{
@@ -48,39 +41,36 @@ void MenuDactylochute::play()
 						position++;
 						if (position == motatester->getsize()) {
 							j.computewpm();
-							mot.pop_front();
+							fenetre.pop_front();
 							j.starttimer();
 							position = 0;
 						}
 						if (position == motatester->getsize() - 2) {
 							if (!j.Plusdemots()) j.MotSuivant();
 							if (!j.Plusdemots()) {
-								mot.push_back(new graphMot(*j.Getlast()));
+								fenetre.push_back(new graphMot(*j.Getlast()));
 							}
 						}
 					}
 				}
 			}
-			for (graphMot* g : mot) {
-				fenetre.drawMot(*g);
-				g->moveMot();
-			}
+			fenetre.drawlist();
 			fenetre.display();
 			fenetre.clear();
 
-			if (!fenetre.testBarre(*motatester, j.getdifficulty()) && mot.size() < 2) {
+			if (!fenetre.testBarre(*motatester, j.getdifficulty()) && fenetre.size() < 2) {
 				if (!j.Plusdemots()) j.MotSuivant();
 				if (!j.Plusdemots()) {
-					mot.push_back(new graphMot(*j.Getlast()));
+					fenetre.push_back(new graphMot(*j.Getlast()));
 				}
 			}
 
 			if (!fenetre.testEcran(*motatester)) {
 				j.starttimer();
-				mot.pop_front();
+				fenetre.pop_front();
 				if (!j.Plusdemots()) j.MotSuivant();
 				if (!j.Plusdemots()) {
-					mot.push_back(new graphMot(*j.Getlast()));
+					fenetre.push_back(new graphMot(*j.Getlast()));
 				}
 				j.starttimer();
 				position = 0;

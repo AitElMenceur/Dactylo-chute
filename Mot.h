@@ -1,8 +1,8 @@
 #ifndef MOT
 #define MOT
-
 #include <string>
 #include <iostream>
+// Ait Elmenceur Ilyès
 using namespace std;
 
 class Mot {

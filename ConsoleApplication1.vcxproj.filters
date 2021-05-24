@@ -85,7 +85,7 @@
     <Text Include="Mots\difficulty_0.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
-    <Text Include="Declaration.txt">
+    <Text Include="Declaration.h">
       <Filter>Fichiers de ressources</Filter>
     </Text>
   </ItemGroup>

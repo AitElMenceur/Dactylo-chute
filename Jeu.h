@@ -1,6 +1,6 @@
 #ifndef JEU
 #define JEU
-
+// Ait Elmenceur Ilyès
 #include <ctime>
 #include <iostream>
 #include <thread>
@@ -8,6 +8,7 @@
 #include <vector>
 
 #include"List.h"
+#include "graphmot.h"
 using namespace std;
 
 class Jeu {

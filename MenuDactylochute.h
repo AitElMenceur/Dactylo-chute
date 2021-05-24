@@ -2,7 +2,14 @@
 #define DACTYLO
 
 #include "menu.h"
-
+#include <iostream>
+#include <cstdlib>
+#include <filesystem>
+#include "Jeu.h"
+#include "graphmot.h"
+#include "Interface.h"
+using namespace std::filesystem;
+// Ait Elmenceur Ilyès
 class MenuDactylochute : public Menu
 {
   public:

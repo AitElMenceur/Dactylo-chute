@@ -172,7 +172,7 @@
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Declaration.txt" />
+    <Text Include="Declaration.h" />
     <Text Include="Mots\difficulty_0.txt" />
   </ItemGroup>
   <ItemGroup>
