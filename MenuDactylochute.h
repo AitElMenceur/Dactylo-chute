@@ -8,6 +8,7 @@
 #include "Jeu.h"
 #include "graphmot.h"
 #include "Interface.h"
+#include <SFML/Audio.hpp>
 using namespace std::filesystem;
 // Ait Elmenceur Ilyès
 class MenuDactylochute : public Menu

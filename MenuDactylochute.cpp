@@ -30,6 +30,12 @@ void MenuDactylochute::play()
 	sf::Sprite sprite;
 	sprite.setTexture(texture);
 
+	sf::Music music;
+	if (!music.openFromFile("instru.wav")) {
+		cout<<"Error loading music"<<endl;
+	}
+	music.play();
+
 	while (fenetre.isOpen())
 	{
 		j.starttimer();
