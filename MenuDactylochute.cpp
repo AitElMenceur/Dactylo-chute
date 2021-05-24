@@ -23,19 +23,24 @@ void MenuDactylochute::play()
 	int position = 0;
 	bool pause = false;
 	
+	//
 	sf::Texture texture;
+	sf::Sprite sprite;
 	if (!texture.loadFromFile("city.jpg"))
 	{
 		cout << "Error loading background image" << endl;
 	}
-	sf::Sprite sprite;
-	sprite.setTexture(texture);
-
+	else {
+		sprite.setTexture(texture);
+	}
 	sf::Music music;
 	if (!music.openFromFile("instru.wav")) {
 		cout<<"Error loading music"<<endl;
 	}
-	music.play();
+	else {
+		music.play();
+	}
+
 
 	while (fenetre.isOpen())
 	{
